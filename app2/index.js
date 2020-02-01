@@ -1,12 +1,13 @@
 import React from 'react';
-import {AppRegistry, View, Text} from 'react-native';
+import {AppRegistry, View, Text, Image} from 'react-native';
 
 // Cria componente
 const App = () => {
-  const {estiloView, estiloTexto} = Estilos;
+  const {principal} = Estilos;
   return (
-    <View style={estiloView}>
-      <Text style={estiloTexto}>Frases do Dia</Text>
+    <View style={principal}>
+      {/* <Image source={require('./img/uvas.png')} /> */}
+      <Image source={require({})} />
     </View>
   );
 };
@@ -14,17 +15,35 @@ AppRegistry.registerComponent('app2', () => App);
 
 // Formatação
 const Estilos = {
-  estiloTexto: {
-    fontSize: 20,
-    backgroundColor: '#3C3',
-    color: '#fff',
-    height: 60,
-    width: 60,
+  principal: {
+    paddingTop: 40,
   },
-  estiloView: {
-    backgroundColor: 'skyblue',
-    height: 300,
-    justifyContent: 'center',
-    alignItems: 'flex-end',
+  botao: {
+    backgroundColor: '#48BBEC',
+    padding: 10,
+    borderColor: '#1d8eb8',
+    borderWidth: 1,
+    borderRadius: 10,
+    shadowColor: '#000',
+    shadowOffset: {width: 0, height: 2},
+    shadowOpacity: 0.4,
+  },
+  textoBotao: {
+    color: '#fff',
+    fontSize: 16,
+    alignSelf: 'center',
+    fontWeight: 'bold',
+  },
+  topo: {
+    flex: 1,
+    backgroundColor: '#3388ff',
+  },
+  conteudo: {
+    flex: 12,
+    backgroundColor: '#f0f',
+  },
+  rodape: {
+    flex: 1,
+    backgroundColor: '#cacaca',
   },
 };
