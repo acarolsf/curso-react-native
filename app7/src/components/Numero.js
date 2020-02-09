@@ -1,9 +1,13 @@
 import React from 'react';
 import {View, TextInput, StyleSheet} from 'react-native';
 
-const Numero = props => (
+export default props => (
   <View>
-    <TextInput style={styles.numero} />
+    <TextInput
+      style={styles.numero}
+      value={props.num}
+      onChangeText={valor => props.atualizaValor(props.nome, valor)}
+    />
   </View>
 );
 
@@ -16,5 +20,3 @@ const styles = StyleSheet.create({
     borderBottomWidth: 2,
   },
 });
-
-export {Numero};

@@ -2,10 +2,10 @@ import React from 'react';
 import {View, StyleSheet} from 'react-native';
 import {Numero} from './Numero';
 
-const Entrada = props => (
+export default props => (
   <View style={styles.entrada}>
-    <Numero />
-    <Numero />
+    <Numero num={props.num1} atualizaValor={props.atualizaValor} nome="num1" />
+    <Numero num={props.num2} atualizaValor={props.atualizaValor} nome="num2" />
   </View>
 );
 
@@ -15,4 +15,3 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
 });
-export {Entrada};

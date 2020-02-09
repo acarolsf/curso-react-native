@@ -1,6 +1,4 @@
 import React from 'react';
 import {Visor} from './Visor';
 
-const Resultado = props => <Visor />;
-
-export {Resultado};
+export default props => <Visor resultado={props.resultado} />;

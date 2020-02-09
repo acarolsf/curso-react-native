@@ -1,12 +1,13 @@
 import React from 'react';
 import {View, StyleSheet, TextInput} from 'react-native';
 
-const Visor = props => (
+export default props => (
   <View>
     <TextInput
       style={styles.inputResultado}
       placeholder="Resultado"
       editable={false}
+      value={props.resultado}
     />
   </View>
 );
@@ -17,5 +18,3 @@ const styles = StyleSheet.create({
     fontSize: 50,
   },
 });
-
-export {Visor};
